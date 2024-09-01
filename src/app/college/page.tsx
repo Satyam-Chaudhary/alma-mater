@@ -1,14 +1,9 @@
-import Image from "next/image";
 
 export default function Home() {
   return (
     <div>
-      <Image
-        src="/images/college.jpg"
-        alt="College"
-        width={500}
-        height={500}
-        />
+     
+        <h1>this is something </h1>
     </div>
   );
 }
