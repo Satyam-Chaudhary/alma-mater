@@ -1,0 +1,54 @@
+{
+    "government_indian_engineering_colleges": [
+      {
+        "name": "Indian Institute of Technology Bombay",
+        "image_link": "https://example.com/iit_bombay.jpg",
+        "established": "1958"
+      },
+      {
+        "name": "Indian Institute of Technology Delhi",
+        "image_link": "https://example.com/iit_delhi.jpg",
+        "established": "1961"
+      },
+      {
+        "name": "Indian Institute of Technology Madras",
+        "image_link": "https://example.com/iit_madras.jpg",
+        "established": "1959"
+      },
+      {
+        "name": "Indian Institute of Technology Kanpur",
+        "image_link": "https://example.com/iit_kanpur.jpg",
+        "established": "1959"
+      },
+      {
+        "name": "Indian Institute of Technology Kharagpur",
+        "image_link": "https://example.com/iit_kharagpur.jpg",
+        "established": "1951"
+      },
+      {
+        "name": "National Institute of Technology Tiruchirappalli",
+        "image_link": "https://example.com/nit_trichy.jpg",
+        "established": "1964"
+      },
+      {
+        "name": "National Institute of Technology Rourkela",
+        "image_link": "https://example.com/nit_rourkela.jpg",
+        "established": "1961"
+      },
+      {
+        "name": "Indian Institute of Technology Roorkee",
+        "image_link": "https://example.com/iit_roorkee.jpg",
+        "established": "1847"
+      },
+      {
+        "name": "National Institute of Technology Warangal",
+        "image_link": "https://example.com/nit_warangal.jpg",
+        "established": "1959"
+      },
+      {
+        "name": "Indian Institute of Technology Guwahati",
+        "image_link": "https://example.com/iit_guwahati.jpg",
+        "established": "1994"
+      }
+    ]
+  }
