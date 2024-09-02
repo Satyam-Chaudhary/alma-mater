@@ -48,6 +48,8 @@ const SearchBar = () => {
               <Search className="text-[#1C1B1F] h-6 w-6" />
 }
             </Button>
+
+            <Button> Explore </Button>
           </div>
         </div>
       </div>
