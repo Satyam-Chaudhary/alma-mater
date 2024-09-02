@@ -1,4 +1,4 @@
-import { PinContainer } from "@/components/ui/3d-pin"
+
 import CollegeCards from "./CollegeCards"
 
 const CollegesHome = () => {

@@ -41,7 +41,7 @@ const SearchBar = () => {
             <Button
               onClick={search}
               disabled={isSearching}
-              variant={"tertinary"}
+              variant={"tertiary"}
               className="absolute right-0 inset-y-0 rounded-l-none bg-white rounded-full"
             >
               {isSearching ? <Loader2 className="h-6 w-6 animate-spin"/> : 
