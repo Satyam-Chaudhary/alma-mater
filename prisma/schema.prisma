@@ -21,7 +21,27 @@ model CollegeDetails {
   CollegeName   String   @unique
   Established  Int  
 }
+model AlumniUser{ 
+  id    String @id@default(auto())@map("_id")@db.ObjectId
+  Name  String 
+  EmailId  String @unique 
+  Password  String  @unique@db.String// search for not null 
+  Abc_ID String  @unique@db.String 
+  StudentEmailId  String?  @unique
+  YOG String 
+}
 
+model StudentUser { 
+  id String @id@default(auto())@map("_id")@db.ObjectId
+  Name  String 
+  EmailId  String @unique@db.String 
+  StudentEmailId  String @unique@db.String 
+  Password String @unique@db.String 
+  Abc_Id String @unique@db.String
+  Branch String 
+  YOG String 
+
+}
 
 
 // Address is an embedded document
