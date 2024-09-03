@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Loader2, Search } from "lucide-react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { redirect, useRouter } from "next/navigation";
 import { startTransition, useRef, useState, useTransition } from "react";
 import { useDebouncedCallback } from 'use-debounce';
 
