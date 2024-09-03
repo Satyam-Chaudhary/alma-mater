@@ -14,7 +14,7 @@ export default function RootLayout({
         <div className="relative min-h-screen isolate overflow-hidden border-b border-gray-200 bg-white">
         <Nav/>
           <svg
-            className="absolute inset-0 -z-10 h-full w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
+            className="absolute inset-0 -z-10 h-full w-full stroke-gray-400 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
             aria-hidden="true"
           >
             <defs>
@@ -32,7 +32,7 @@ export default function RootLayout({
             <rect
               width="100%"
               height="100%"
-              strokeWidth={0}
+              strokeWidth={1}
               fill="url(#0787a7c5-978c-4f66-83c7-11c213f99cb7)"
             />
           </svg>
