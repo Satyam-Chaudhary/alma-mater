@@ -49,7 +49,7 @@ const SearchBar = () => {
 }
             </Button>
 
-            <Button> Explore </Button>
+            
           </div>
         </div>
       </div>

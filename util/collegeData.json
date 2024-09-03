@@ -1,54 +1,356 @@
 {
-    "government_indian_engineering_colleges": [
-      {
-        "name": "Indian Institute of Technology Bombay",
-        "image_link": "https://example.com/iit_bombay.jpg",
-        "established": "1958"
-      },
-      {
-        "name": "Indian Institute of Technology Delhi",
-        "image_link": "https://example.com/iit_delhi.jpg",
-        "established": "1961"
-      },
-      {
-        "name": "Indian Institute of Technology Madras",
-        "image_link": "https://example.com/iit_madras.jpg",
-        "established": "1959"
-      },
-      {
-        "name": "Indian Institute of Technology Kanpur",
-        "image_link": "https://example.com/iit_kanpur.jpg",
-        "established": "1959"
-      },
-      {
-        "name": "Indian Institute of Technology Kharagpur",
-        "image_link": "https://example.com/iit_kharagpur.jpg",
-        "established": "1951"
-      },
-      {
-        "name": "National Institute of Technology Tiruchirappalli",
-        "image_link": "https://example.com/nit_trichy.jpg",
-        "established": "1964"
-      },
-      {
-        "name": "National Institute of Technology Rourkela",
-        "image_link": "https://example.com/nit_rourkela.jpg",
-        "established": "1961"
-      },
-      {
-        "name": "Indian Institute of Technology Roorkee",
-        "image_link": "https://example.com/iit_roorkee.jpg",
-        "established": "1847"
-      },
-      {
-        "name": "National Institute of Technology Warangal",
-        "image_link": "https://example.com/nit_warangal.jpg",
-        "established": "1959"
-      },
-      {
-        "name": "Indian Institute of Technology Guwahati",
-        "image_link": "https://example.com/iit_guwahati.jpg",
-        "established": "1994"
-      }
-    ]
-  }
+  "colleges": [
+    {
+      "name": "National Institute of Technology, Tiruchirappalli",
+      "established": 1964
+    },
+    {
+      "name": "Indian Institute of Technology, Bombay",
+      "established": 1958
+    },
+    {
+      "name": "Indian Institute of Technology, Delhi",
+      "established": 1961
+    },
+    {
+      "name": "Indian Institute of Technology, Kanpur",
+      "established": 1959
+    },
+    {
+      "name": "Indian Institute of Technology, Kharagpur",
+      "established": 1951
+    },
+    {
+      "name": "Indian Institute of Technology, Madras",
+      "established": 1959
+    },
+    {
+      "name": "Indian Institute of Technology, Roorkee",
+      "established": 1847
+    },
+    {
+      "name": "Indian Institute of Technology, Guwahati",
+      "established": 1994
+    },
+    {
+      "name": "National Institute of Technology, Warangal",
+      "established": 1959
+    },
+    {
+      "name": "National Institute of Technology, Rourkela",
+      "established": 1961
+    },
+    {
+      "name": "National Institute of Technology, Calicut",
+      "established": 1961
+    },
+    {
+      "name": "National Institute of Technology, Durgapur",
+      "established": 1960
+    },
+    {
+      "name": "National Institute of Technology, Jamshedpur",
+      "established": 1960
+    },
+    {
+      "name": "National Institute of Technology, Kurukshetra",
+      "established": 1963
+    },
+    {
+      "name": "National Institute of Technology, Patna",
+      "established": 1886
+    },
+    {
+      "name": "National Institute of Technology, Srinagar",
+      "established": 1960
+    },
+    {
+      "name": "National Institute of Technology, Surathkal",
+      "established": 1960
+    },
+    {
+      "name": "National Institute of Technology, Silchar",
+      "established": 1967
+    },
+    {
+      "name": "National Institute of Technology, Hamirpur",
+      "established": 1986
+    },
+    {
+      "name": "Motilal Nehru National Institute of Technology, Allahabad",
+      "established": 1961
+    },
+    {
+      "name": "Visvesvaraya National Institute of Technology, Nagpur",
+      "established": 1960
+    },
+    {
+      "name": "National Institute of Technology, Raipur",
+      "established": 1956
+    },
+    {
+      "name": "Sardar Vallabhbhai National Institute of Technology, Surat",
+      "established": 1961
+    },
+    {
+      "name": "Malaviya National Institute of Technology, Jaipur",
+      "established": 1963
+    },
+    {
+      "name": "Dr. B. R. Ambedkar National Institute of Technology, Jalandhar",
+      "established": 1987
+    },
+    {
+      "name": "National Institute of Technology, Agartala",
+      "established": 1965
+    },
+    {
+      "name": "National Institute of Technology, Arunachal Pradesh",
+      "established": 2010
+    },
+    {
+      "name": "National Institute of Technology, Delhi",
+      "established": 2010
+    },
+    {
+      "name": "National Institute of Technology, Goa",
+      "established": 2010
+    },
+    {
+      "name": "National Institute of Technology, Manipur",
+      "established": 2010
+    },
+    {
+      "name": "National Institute of Technology, Meghalaya",
+      "established": 2010
+    },
+    {
+      "name": "National Institute of Technology, Mizoram",
+      "established": 2010
+    },
+    {
+      "name": "National Institute of Technology, Nagaland",
+      "established": 2010
+    },
+    {
+      "name": "National Institute of Technology, Puducherry",
+      "established": 2010
+    },
+    {
+      "name": "National Institute of Technology, Sikkim",
+      "established": 2010
+    },
+    {
+      "name": "National Institute of Technology, Uttarakhand",
+      "established": 2010
+    },
+    {
+      "name": "Indian Institute of Engineering Science and Technology, Shibpur",
+      "established": 1856
+    },
+    {
+      "name": "Indian Institute of Technology (BHU), Varanasi",
+      "established": 1919
+    },
+    {
+      "name": "Indian Institute of Technology, Bhubaneswar",
+      "established": 2008
+    },
+    {
+      "name": "Indian Institute of Technology, Gandhinagar",
+      "established": 2008
+    },
+    {
+      "name": "Indian Institute of Technology, Hyderabad",
+      "established": 2008
+    },
+    {
+      "name": "Indian Institute of Technology, Indore",
+      "established": 2009
+    },
+    {
+      "name": "Indian Institute of Technology, Jodhpur",
+      "established": 2008
+    },
+    {
+      "name": "Indian Institute of Technology, Mandi",
+      "established": 2009
+    },
+    {
+      "name": "Indian Institute of Technology, Patna",
+      "established": 2008
+    },
+    {
+      "name": "Indian Institute of Technology, Ropar",
+      "established": 2008
+    },
+    {
+      "name": "Indian Institute of Technology, Palakkad",
+      "established": 2015
+    },
+    {
+      "name": "Indian Institute of Technology, Tirupati",
+      "established": 2015
+    },
+    {
+      "name": "Indian Institute of Technology, Bhilai",
+      "established": 2016
+    },
+    {
+      "name": "Indian Institute of Technology, Goa",
+      "established": 2016
+    },
+    {
+      "name": "Indian Institute of Technology, Jammu",
+      "established": 2016
+    },
+    {
+      "name": "Indian Institute of Technology, Dharwad",
+      "established": 2016
+    },
+    {
+      "name": "College of Engineering, Pune",
+      "established": 1854
+    },
+    {
+      "name": "Jadavpur University, Kolkata",
+      "established": 1955
+    },
+    {
+      "name": "Anna University, Chennai",
+      "established": 1978
+    },
+    {
+      "name": "Delhi Technological University, Delhi",
+      "established": 1941
+    },
+    {
+      "name": "Punjab Engineering College, Chandigarh",
+      "established": 1921
+    },
+    {
+      "name": "Jawaharlal Nehru Technological University, Hyderabad",
+      "established": 1972
+    },
+    {
+      "name": "Banaras Hindu University, Varanasi",
+      "established": 1916
+    },
+    {
+      "name": "Cochin University of Science and Technology, Kochi",
+      "established": 1971
+    },
+    {
+      "name": "Birla Institute of Technology, Mesra",
+      "established": 1955
+    },
+    {
+      "name": "Visvesvaraya Technological University, Belgaum",
+      "established": 1998
+    },
+    {
+      "name": "Aligarh Muslim University, Aligarh",
+      "established": 1920
+    },
+    {
+      "name": "Thapar Institute of Engineering and Technology, Patiala",
+      "established": 1956
+    },
+    {
+      "name": "Bengal Engineering and Science University, Shibpur",
+      "established": 1856
+    },
+    {
+      "name": "University College of Engineering, Osmania University",
+      "established": 1929
+    },
+    {
+      "name": "Faculty of Engineering and Technology, Jamia Millia Islamia",
+      "established": 1985
+    },
+    {
+      "name": "Zakir Husain College of Engineering and Technology, AMU",
+      "established": 1938
+    },
+    {
+      "name": "University Institute of Engineering and Technology, Panjab University",
+      "established": 2002
+    },
+    {
+      "name": "Dr. B. R. Ambedkar National Institute of Technology, Jalandhar",
+      "established": 1987
+    },
+    {
+      "name": "Jawaharlal Nehru Engineering College, Aurangabad",
+      "established": 1983
+    },
+    {
+      "name": "College of Engineering, Trivandrum",
+      "established": 1939
+    },
+    {
+      "name": "Jawaharlal Nehru Technological University, Anantapur",
+      "established": 1946
+    },
+    {
+      "name": "Netaji Subhas Institute of Technology, Delhi",
+      "established": 1983
+    },
+    {
+      "name": "Government College of Engineering, Pune",
+      "established": 1854
+    },
+    {
+      "name": "Coimbatore Institute of Technology, Coimbatore",
+      "established": 1956
+    },
+    {
+      "name": "Thiagarajar College of Engineering, Madurai",
+      "established": 1957
+    },
+    {
+      "name": "PSG College of Technology, Coimbatore",
+      "established": 1951
+    },
+    {
+      "name": "Alagappa Chettiar College of Engineering and Technology, Karaikudi",
+      "established": 1952
+    },
+    {
+      "name": "University Visvesvaraya College of Engineering, Bangalore",
+      "established": 1917
+    },
+    {
+      "name": "Government Engineering College, Thrissur",
+      "established": 1957
+    },
+    {
+      "name": "Dwarkadas J. Sanghvi College of Engineering, Mumbai",
+      "established": 1994
+    },
+    {
+      "name": "Veermata Jijabai Technological Institute, Mumbai",
+      "established": 1887
+    },
+    {
+      "name": "Walchand College of Engineering, Sangli",
+      "established": 1947
+    },
+    {
+      "name": "College of Engineering, Guindy",
+      "established": 1794
+    },
+    {
+      "name": "University College of Engineering, Kakinada",
+      "established": 1946
+    },
+    {
+      "name": "University College of Engineering, Andhra University",
+      "established": 1933
+    },
+    {
+      "name": "Sree Chitra Thirunal College of Engineering, Thiruvananthapuram",
+      "established": 1995
+    }
+  ]
+}
