@@ -7,19 +7,16 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model CollegeDetails {
+  id                 String @id @default(auto()) @map("_id") @db.ObjectId
+  collegeDescription String
+  collegeId          String @db.ObjectId
+  collegeName        String
+  numberOfAlumni     Int
+}
+
 model CollegesName {
   id          String @id @default(auto()) @map("_id") @db.ObjectId
   established Int
   name        String
-
-
-}
-
-model CollegeDetails {
-  id          String       @id @default(auto()) @map("_id") @db.ObjectId
-  name        String
-  description String
-  numberAlumni Int
-  
- 
 }
