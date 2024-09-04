@@ -4,12 +4,12 @@ import prisma from "@/db/prisma";
 export async function fetchCollegeName(query: string) {
     const collegeTitleCard = await prisma.collegeDetails.findMany({
       where: {
-        CollegeName: {
+        collegeName: {
           contains: query,
           mode: 'insensitive',
         },
       },
-      select: { CollegeName : true },
+      select: { collegeName : true },
       take: 3,
     });
     return collegeTitleCard;
