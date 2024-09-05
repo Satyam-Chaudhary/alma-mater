@@ -20,28 +20,30 @@ export const SearchBar = () => {
     setLoading(true);
     setHasQuery(!!term); // 2 times as fisrst convert to boolean and then to opposite
     try {
-      const response = await fetch(`/api/search?query=${encodeURIComponent(term)}`);
-      const searchResults = await response.json();
-      
-      setResults(searchResults);
       const params = new URLSearchParams(searchParams);
       if (term) {
         params.set("query", term);
+        const response = await fetch(
+          `/api/search?query=${encodeURIComponent(term)}`
+        );
+        const searchResults = await response.json();
+
+        setResults(searchResults);
       } else {
         params.delete("query");
         setResults([]);
       }
       replace(`${pathname}?${params.toString()}`);
     } catch (error) {
-      console.error('Failed to fetch search results', error);
+      console.error("Failed to fetch search results", error);
     } finally {
       setLoading(false);
     }
   }, 200);
 
   const handleBlur = (e: KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === 'Escape' && inputRef.current) {
-      inputRef.current.value = '';
+    if (e.key === "Escape" && inputRef.current) {
+      inputRef.current.value = "";
       const params = new URLSearchParams(searchParams);
       params.delete("query");
       replace(`${pathname}?${params.toString()}`);
@@ -65,23 +67,22 @@ export const SearchBar = () => {
             ref={inputRef}
           />
           <div>
-          {loading && (
-          <div className="absolute top-full left-0 right-0 p-4 bg-white border border-gray-200 shadow-lg rounded-lg flex justify-center opacity-80 z-10">
-            <Loader2 className="animate-spin " />
+            {loading && (
+              <div className="absolute top-full left-0 right-0 p-4 bg-white border border-gray-200 shadow-lg rounded-lg flex justify-center opacity-80 z-10">
+                <Loader2 className="animate-spin " />
+              </div>
+            )}
+            {results.length > 0 ? (
+              <div className="absolute top-full left-0 right-0 p-4 bg-white border border-gray-200 shadow-lg rounded-lg z-10 opacity-95">
+                <SearchResults results={results} />
+              </div>
+            ) : hasQuery && results.length === 0 && !loading ? (
+              <div className="absolute top-full left-0 right-0 p-4 bg-white border border-gray-200 shadow-lg rounded-lg opacity-80 z-10">
+                <p className="text-center text-gray-500">No results found</p>
+              </div>
+            ) : null}
           </div>
-        )}
-        {results.length > 0 ? (
-          <div className="absolute top-full left-0 right-0 p-4 bg-white border border-gray-200 shadow-lg rounded-lg z-10 opacity-95">
-            <SearchResults results={results} />
-          </div>
-        ) : hasQuery && results.length === 0 && !loading ? (
-          <div className="absolute top-full left-0 right-0 p-4 bg-white border border-gray-200 shadow-lg rounded-lg opacity-80 z-10">
-            <p className="text-center text-gray-500">No results found</p>
-          </div>
-        ) : null}
         </div>
-        </div>
-        
       </div>
     </div>
   );

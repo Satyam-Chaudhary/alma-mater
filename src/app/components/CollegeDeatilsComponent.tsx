@@ -14,13 +14,13 @@ const CollegeDetailsComponent: React.FC<CollegeDetailsProps> = ({ collegeData, l
 
   if (loading) {
     return (
-      <div className="flex gap-16">
+      <div className="flex gap-16 relative">
         <Skeleton className="w-[384px] h-[225px] rounded-sm flex-shrink-0 bg-gray-200" />
-        <div className="bg-slate-50 p-4 leading-7 pb-2 w-[80%]">
+        <div className="bg-slate-50 p-4 leading-7 pb-2 w-[80%] rounded-md">
           <Skeleton className="w-[400px] h-[36px] rounded-full mb-2 bg-gray-200" />
           <Skeleton className="w-full h-[20px] rounded-full mb-2 bg-gray-200" />
           <Skeleton className="w-3/4 h-[20px] rounded-full mb-2 bg-gray-200" />
-          <Skeleton className="w-[150px] h-[20px] rounded-full mt-2 bg-gray-200" />
+          <Skeleton className="w-[150px] h-[20px] rounded-full mt-2 bg-gray-200 absolute bottom-4" />
         </div>
       </div>
     );
@@ -44,13 +44,13 @@ const CollegeDetailsComponent: React.FC<CollegeDetailsProps> = ({ collegeData, l
         </div>
   
       
-      <div className="bg-slate-50 p-4 leading-7 pb-2 relative flex-grow">
+      <div className="bg-slate-50 p-4 leading-7 pb-2 relative flex-grow rounded-md">
         <h1 className="text-3xl">{collegeData.collegeName}</h1>
         <p className="font-thin mt-2">{collegeData.collegeDescription}</p>
-        <p className="mt-2">Number of Alumni: {collegeData.numberOfAlumni}</p>
+        <p className="mt-2 absolute bottom-4">Number of Alumni: {collegeData.numberOfAlumni}</p>
         <div className="absolute right-3 bottom-3 flex items-center gap-3">
         <p className="text-sm font-thin">Student or Alumni?</p>
-        <Button variant={"tertiary"} className="bg-[#5295F8] ">Log In</Button>
+        <Button variant={"tertiary"} className="bg-[#5295F8] hover:bg-[#4683de]">Log In / Sign Up</Button>
         </div>
        
       </div>
