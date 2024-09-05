@@ -29,7 +29,7 @@ const Page = () => {
       console.log("this goes here")
 
       if (idparam) {
-        const data = await fetchCollegeDetail('Indian Institute of Technology, Bombay');
+        const data = await fetchCollegeDetail(idparam);
      
         setCollegeData(data);
        
