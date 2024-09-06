@@ -1,13 +1,13 @@
 import { NextResponse } from 'next/server';
 import prisma from "@/db/prisma";
 
-export async function GET(request: Request, { params }: { params: { name: string } }) {
-    const { name } = params;
+export async function GET(request: Request, { params }: { params: { collegeId: string } }) {
+    const { collegeId } = params;
 
     try {
         const collegeDetail = await prisma.collegeDetails.findFirst({
             where: {
-                collegeName: name,
+                collegeId: collegeId,
             },
             select: {
                 collegeDescription: true,

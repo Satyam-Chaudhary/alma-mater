@@ -10,7 +10,7 @@ const SearchResults: React.FC<SearchResultsProps> = ({ results }) => {
       {results.map((result) => (
         <div key={result.id} className="p-2 hover:bg-gray-100 rounded-sm">
           <Link
-            href={`/collegeDetails/${result.name}?id=${encodeURIComponent(result.name)}&est=${result.established}`}
+            href={`/collegeDetails/${result.id}?id=${encodeURIComponent(result.name)}&est=${result.established}`}
           >
             <div>{result.name}</div>
           </Link>

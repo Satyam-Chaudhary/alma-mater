@@ -4,11 +4,25 @@ import { Skeleton } from "@/components/ui/skeleton";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import {NavBarCollegeDetails} from "./NavBarCollegeDetails";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 
+
+import Link from "next/link";
 interface CollegeDetailsProps {
   collegeData: CollegeDetails | null;
   loading: boolean;
 }
+
 
 const CollegeDetailsComponent: React.FC<CollegeDetailsProps> = ({
   collegeData,
@@ -55,12 +69,32 @@ const CollegeDetailsComponent: React.FC<CollegeDetailsProps> = ({
           </p>
           <div className="absolute right-3 bottom-3 flex items-center gap-3">
             <p className="text-sm font-thin">Student or Alumni?</p>
-            <Button
-              variant={"tertiary"}
-              className="bg-[#5295F8] hover:bg-[#3185FC]"
-            >
-              Log In / Sign Up
-            </Button>
+            <Dialog>
+      <DialogTrigger asChild>
+        <Button variant="outline" className="bg-blue-400 text-white">Edit Profile</Button>
+      </DialogTrigger>
+      <DialogContent className="sm:max-w-[425px]">
+        <DialogHeader >
+          <DialogTitle>Sign In/ Login</DialogTitle>
+          <DialogDescription>
+            Make changes to your profile here. Click save when you're done.
+          </DialogDescription>
+        </DialogHeader>
+        <div className="grid gap-4 py-4">
+          <div className="grid grid-cols-4 items-center gap-4">
+            <Label htmlFor="name" className="text-right">
+             Who Are You ? 
+            </Label>
+            <Link href={"/sign-in/"}>
+            <Button> Student ?</Button>
+            </Link>
+            <Link href={"/sign-in/"}>
+            <Button> Alumni ?</Button>
+            </Link>
+          </div>
+        </div>
+      </DialogContent>
+    </Dialog>
           </div>
         </div>
       </div>

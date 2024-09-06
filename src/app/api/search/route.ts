@@ -12,6 +12,7 @@ export async function GET(request: Request) {
   try {
     const results = await prisma.collegesName.findMany({
       where: {
+
         name: {
           contains: query,
           mode: 'insensitive',
