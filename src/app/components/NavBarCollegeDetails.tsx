@@ -60,27 +60,23 @@ const Divider = () => (
 const Events = () => (
   <div>
     <h2 className="text-xl font-bold">Events Content</h2>
-    <p>Details about events will be displayed here.</p>
   </div>
 );
 
 const Research = () => (
   <div>
     <h2 className="text-xl font-bold">Research Content</h2>
-    <p>Details about research will be displayed here.</p>
   </div>
 );
 
 const Startup = () => (
   <div>
     <h2 className="text-xl font-bold">Startup Content</h2>
-    <p>Details about startups will be displayed here.</p>
   </div>
 );
 
 const NetworkHub = () => (
   <div>
     <h2 className="text-xl font-bold">Network Hub Content</h2>
-    <p>Details about the network hub will be displayed here.</p>
   </div>
 );
