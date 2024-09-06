@@ -11,7 +11,7 @@ model CollegeDetails {
   id                 String @id @default(auto()) @map("_id") @db.ObjectId
   collegeDescription String
   collegeId          String @db.ObjectId
-  collegeName        String @unique
+  collegeName        String
   numberOfAlumni     Int
 }
 
