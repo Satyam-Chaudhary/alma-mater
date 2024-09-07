@@ -47,7 +47,7 @@ const NavItem: React.FC<NavItemProps> = ({ label, onClick }) => (
   <Button
     onClick={() => onClick(label)}
     variant={'navBarButton'}
-    className='px-16'
+    className='px-16 transition duration-300 ease-in-out'
   >
     {label}
   </Button>

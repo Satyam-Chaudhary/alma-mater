@@ -57,7 +57,7 @@ const CollegeDetailsComponent: React.FC<CollegeDetailsProps> = ({
             <p className="text-sm font-thin">Student or Alumni?</p>
             <Button
               variant={"tertiary"}
-              className="bg-[#5295F8] hover:bg-[#3185FC]"
+              className="bg-blue-500 hover:bg-blue-600 transition duration-300 ease-in-out focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
             >
               Log In / Sign Up
             </Button>
