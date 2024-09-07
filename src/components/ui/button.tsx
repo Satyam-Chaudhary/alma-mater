@@ -18,6 +18,11 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+<<<<<<< HEAD
+=======
+        tertiary:'bg-primary text-primary-foreground',
+        navBarButton: 'text-white font-semibold px-9 py-2 rounded-full hover:bg-[#5295F8] transition-colors focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50',
+>>>>>>> 26cbd357ed98e87f3ca1c98b5cacbcb7d055543f
       },
       size: {
         default: "h-10 px-4 py-2",
