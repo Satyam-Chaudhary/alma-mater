@@ -14,7 +14,6 @@ const CollegeDetailsComponent: React.FC<CollegeDetailsProps> = ({
   collegeData,
   loading,
 }) => {
-  const [delayedRender, setDelayedRender] = useState(false);
 
   if (loading) {
     return (

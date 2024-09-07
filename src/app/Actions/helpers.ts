@@ -20,3 +20,16 @@ export async function fetchCollegeNames(query: string) {
      return names;
 
    }
+
+export async function fetchTenCollegeNames() {
+    const names = await prisma.collegesName.findMany({
+        select: {
+            name: true,
+            established: false,
+            id: true,
+        },
+        take: 10,
+    });
+
+    return names;
+}
