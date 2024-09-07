@@ -4,6 +4,8 @@ import { Skeleton } from "@/components/ui/skeleton";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import {NavBarCollegeDetails} from "./NavBarCollegeDetails";
+import Link from "next/link";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
 interface CollegeDetailsProps {
   collegeData: CollegeDetails | null;
@@ -55,12 +57,31 @@ const CollegeDetailsComponent: React.FC<CollegeDetailsProps> = ({
           </p>
           <div className="absolute right-3 bottom-3 flex items-center gap-3">
             <p className="text-sm font-thin">Student or Alumni?</p>
-            <Button
-              variant={"tertiary"}
-              className="bg-[#5295F8] hover:bg-[#3185FC]"
-            >
-              Log In / Sign Up
-            </Button>
+           <Dialog>
+           <DialogTrigger asChild>
+            <Button variant="outline">Edit Profile</Button>
+            </DialogTrigger>
+
+            <DialogContent className="sm:max-w-[425px]">
+              
+              <Button>
+              <Link href={"/handler/signup"}>
+                Student ?
+                </Link>
+              </Button>
+             
+              
+              <Button>
+              <Link href={"/handler/signup"} >
+                Alumni ?
+              </Link>
+              </Button>
+             
+            </DialogContent>
+
+
+
+           </Dialog>
           </div>
         </div>
       </div>

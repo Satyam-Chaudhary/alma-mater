@@ -8,15 +8,56 @@ datasource db {
 }
 
 model CollegeDetails {
-  id                 String @id @default(auto()) @map("_id") @db.ObjectId
+  id                 String   @id @default(auto()) @map("_id") @db.ObjectId
   collegeDescription String
-  collegeId          String @db.ObjectId
-  collegeName        String
+  collegeId          String   @db.ObjectId
+  collegeName        String   @unique
   numberOfAlumni     Int
+  //Events             Events[]
 }
 
 model CollegesName {
   id          String @id @default(auto()) @map("_id") @db.ObjectId
   established Int
   name        String
+}
+
+model Events {
+  id                String         @id @default(auto()) @map("_id") @db.ObjectId
+  nameEvent         String
+  smallDescription  String
+  properDescription String
+  websiteLink       String?
+ // collegeId         String         @db.ObjectId
+  //college           CollegeDetails @relation(fields: [collegeId], references: [collegeName])
+}
+
+model Research {
+  id                String  @id @default(auto()) @map("_id") @db.ObjectId
+  nameResearch      String
+  smallDescription  String
+  properDescription String
+  membersEmail      String
+  websiteLink       String?
+  internshipVcancy  Boolean
+}
+
+model Startup {
+  id                String  @id @default(auto()) @map("_id") @db.ObjectId
+  nameStartup       String
+  smallDescription  String
+  properDescription String
+  membersEmail      String
+  websiteLink       String?
+  funded            Boolean
+}
+
+model jobListing {
+  id                String  @id @default(auto()) @map("_id") @db.ObjectId
+  namePosition      String
+  nameCompany       String
+  smallDescription  String
+  properDescription String
+  websiteLink       String?
+  open              Boolean
 }

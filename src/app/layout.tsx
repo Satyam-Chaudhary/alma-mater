@@ -1,4 +1,6 @@
 
+import { StackProvider, StackTheme } from "@stackframe/stack";
+import { stackServerApp } from "../stack";
 import "./globals.css";
 import Nav from "./components/Nav";
 import { inter } from "./ui/fonts";
@@ -10,7 +12,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={inter.className}><StackProvider app={stackServerApp}><StackTheme>
         <div className="relative min-h-screen isolate overflow-hidden border-b border-gray-200 bg-white">
         <Nav/>
           <svg
@@ -38,7 +40,7 @@ export default function RootLayout({
           </svg>
           {children}
         </div>
-      </body>
+      </StackTheme></StackProvider></body>
     </html>
   );
 }

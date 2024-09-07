@@ -60,6 +60,11 @@ const Divider = () => (
 const Events = () => (
   <div>
     <h2 className="text-xl font-bold">Events Content</h2>
+    <Button>
+    <Link href={"/EventForm/"} >
+        create Event
+    </Link>
+    </Button>
   </div>
 );
 
