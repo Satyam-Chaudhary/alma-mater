@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import Events from './Events';
+import Footer from './Footer';
 
 type NavItemProps = {
   label: keyof contentType;
@@ -60,16 +62,7 @@ const Divider = () => (
   <div className="w-0 h-10 border-l-2 border-white transform rotate-12"></div>
 );
 
-const Events: React.FC<{ collegeName: string }> = ({ collegeName }) => (
-  <div>
-    <h2 className="text-xl font-bold">Events Content</h2>
-    <Button>
-      <Link href={`/EventForm/?college=${collegeName}`}>
-        Create Event for {collegeName}
-      </Link>
-    </Button>
-  </div>
-);
+
 
 const Research = () => (
   <div>
@@ -87,4 +80,6 @@ const NetworkHub = () => (
   <div>
     <h2 className="text-xl font-bold">Network Hub Content</h2>
   </div>
+
+
 );

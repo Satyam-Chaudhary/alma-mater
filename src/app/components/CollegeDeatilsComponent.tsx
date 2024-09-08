@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import {NavBarCollegeDetails} from "./NavBarCollegeDetails";
 import Link from "next/link";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import Footer from "./Footer";
 
 interface CollegeDetailsProps {
   collegeData: CollegeDetails | null;
@@ -55,10 +56,10 @@ const CollegeDetailsComponent: React.FC<CollegeDetailsProps> = ({
             Number of Alumni: {collegeData.numberOfAlumni}
           </p>
           <div className="absolute right-3 bottom-3 flex items-center gap-3">
-            <p className="text-sm font-thin">Student or Alumni?</p>
+            <p className="text-sm font-light">Student or Alumni?</p>
            <Dialog>
            <DialogTrigger asChild>
-            <Button variant="outline">Edit Profile</Button>
+            <Button variant="primaryBtn">Edit Profile</Button>
             </DialogTrigger>
 
             <DialogContent className="sm:max-w-[425px]">
@@ -85,7 +86,8 @@ const CollegeDetailsComponent: React.FC<CollegeDetailsProps> = ({
         </div>
       </div>
 
-      <div className="w-auto"><NavBarCollegeDetails collegeName={collegeData.collegeName} /></div>
+      <div className="w-auto"><NavBarCollegeDetails collegeName={collegeData.collegeName}/></div>
+      
     </div>
   );
 };

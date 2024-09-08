@@ -47,7 +47,7 @@ const CollegesHome = () => {
                   key={college.id}
                   college={{
                     collegeName: college.collegeName,
-                    link: `/collegeDetails/${college.collegeName}?id=${encodeURIComponent(college.collegeName)}&est=${college.established}`,
+                    link: `/collegeDetails/${college.collegeName}?id=${encodeURIComponent(college.collegeName)}`,
                     imgLink:college.collegeImageLink
                   }}
                 />
