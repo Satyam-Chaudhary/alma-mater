@@ -1,15 +1,15 @@
 import { NextResponse } from 'next/server';
 import prisma from "@/db/prisma";
 
+
 export async function GET() {
   try {
-    const names = await prisma.collegesName.findMany({
+    const names = await prisma.collegeDetails.findMany({
       select: {
-        name: true,
+        collegeName: true,
         id: true,
-        established: true
       },
-      take: 9, 
+      take: 20, 
     });
 
     // Return the fetched data as JSON
