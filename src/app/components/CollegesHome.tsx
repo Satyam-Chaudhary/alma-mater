@@ -5,7 +5,7 @@ import { Skeleton } from "@/components/ui/skeleton";
  
 
 const CollegesHome = () => {
-  const [colleges, setColleges] = useState<{ id: string; collegeName: string, established: number }[]>([]);
+  const [colleges, setColleges] = useState<{ id: string; collegeName: string, established: number, collegeImageLink?: string }[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
 
@@ -48,6 +48,7 @@ const CollegesHome = () => {
                   college={{
                     collegeName: college.collegeName,
                     link: `/collegeDetails/${college.collegeName}?id=${encodeURIComponent(college.collegeName)}&est=${college.established}`,
+                    imgLink:college.collegeImageLink
                   }}
                 />
               ))

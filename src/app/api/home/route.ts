@@ -8,6 +8,7 @@ export async function GET() {
       select: {
         collegeName: true,
         id: true,
+        collegeImageLink: true
       },
       take: 20, 
     });
