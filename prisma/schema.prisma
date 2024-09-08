@@ -13,7 +13,7 @@ model CollegeDetails {
   collegeId          String   @db.ObjectId
   collegeName        String   @unique
   numberOfAlumni     Int
-  collegeImageLink   String 
+  collegeImageLink   String? 
   //Events             Events[]
 }
 
@@ -31,6 +31,7 @@ model Events {
   websiteLink       String?
  // collegeId         String         @db.ObjectId
   //college           CollegeDetails @relation(fields: [collegeId], references: [collegeName])
+  collegeName       String?
 }
 
 model Research {
@@ -41,6 +42,7 @@ model Research {
   membersEmail      String
   websiteLink       String?
   internshipVcancy  Boolean
+  collegeName       String?
 }
 
 model Startup {
@@ -51,6 +53,7 @@ model Startup {
   membersEmail      String
   websiteLink       String?
   funded            Boolean
+  collegeName       String?
 }
 
 model jobListing {
@@ -61,4 +64,5 @@ model jobListing {
   properDescription String
   websiteLink       String?
   open              Boolean
+  collegeName       String?
 }

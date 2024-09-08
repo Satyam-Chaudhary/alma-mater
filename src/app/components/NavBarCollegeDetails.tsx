@@ -1,7 +1,6 @@
-'use client'
+import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import React, { useState } from 'react';
 
 type NavItemProps = {
   label: keyof contentType;
@@ -15,7 +14,11 @@ interface contentType {
   NetworkHub: string;
 }
 
-export const NavBarCollegeDetails = () => {
+interface NavBarCollegeDetailsProps {
+  collegeName: string;
+}
+
+export const NavBarCollegeDetails: React.FC<NavBarCollegeDetailsProps> = ({ collegeName }) => {
   const [content, setContent] = useState<keyof contentType>('Events');
 
   const handleNavItemClick = (label: keyof contentType) => {
@@ -34,7 +37,7 @@ export const NavBarCollegeDetails = () => {
         <NavItem label="NetworkHub" onClick={handleNavItemClick} />
       </nav>
       <div className="mt-4">
-        {content === 'Events' && <Events />}
+        {content === 'Events' && <Events collegeName={collegeName} />}
         {content === 'Research' && <Research />}
         {content === 'Startup' && <Startup />}
         {content === 'NetworkHub' && <NetworkHub />}
@@ -47,7 +50,7 @@ const NavItem: React.FC<NavItemProps> = ({ label, onClick }) => (
   <Button
     onClick={() => onClick(label)}
     variant={'navBarButton'}
-    className='px-16 transition duration-300 ease-in-out'
+    className="px-16 transition duration-300 ease-in-out"
   >
     {label}
   </Button>
@@ -57,13 +60,13 @@ const Divider = () => (
   <div className="w-0 h-10 border-l-2 border-white transform rotate-12"></div>
 );
 
-const Events = () => (
+const Events: React.FC<{ collegeName: string }> = ({ collegeName }) => (
   <div>
     <h2 className="text-xl font-bold">Events Content</h2>
     <Button>
-    <Link href={"/EventForm/"} >
-        create Event
-    </Link>
+      <Link href={`/EventForm/?college=${collegeName}`}>
+        Create Event for {collegeName}
+      </Link>
     </Button>
   </div>
 );

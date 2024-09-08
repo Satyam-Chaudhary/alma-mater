@@ -85,7 +85,7 @@ const CollegeDetailsComponent: React.FC<CollegeDetailsProps> = ({
         </div>
       </div>
 
-      <div className="w-auto"><NavBarCollegeDetails/></div>
+      <div className="w-auto"><NavBarCollegeDetails collegeName={collegeData.collegeName} /></div>
     </div>
   );
 };
