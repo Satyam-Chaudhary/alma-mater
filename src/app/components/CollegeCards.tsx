@@ -7,18 +7,19 @@ interface CollegeCardProps {
   college: {
     collegeName: string;
     link: string;
+    imgLink?: string;
   };
 }
 
 const CollegeCards: React.FC<CollegeCardProps> = ({ college }) => {
   return (
     <Card className="relative w-[323px] h-[164px] overflow-hidden">
-      <Image
-        src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202311/iit-bombay-091918699-16x9.jpg?VersionId=AQZFnKvlj7kv8szgo5b4mMxyK5Y5a6UB&size=690:388"
+      <img
+        src={college.imgLink ? `${college.imgLink}` : "https://www.onlinemanipal.com/wp-content/uploads/2024/07/institute-muj.webp"}
         alt="college"
-        className="rounded-sm opacity-85"
-        layout="fill"
-        objectFit="cover"
+        className="rounded-sm opacity-85 object-cover w-full h-full"
+        // layout="fill"
+        // objectFit="cover"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
       <div className="absolute bottom-0 left-0 right-0 p-4 flex justify-between items-end">

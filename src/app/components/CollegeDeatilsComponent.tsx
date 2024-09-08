@@ -39,18 +39,18 @@ const CollegeDetailsComponent: React.FC<CollegeDetailsProps> = ({
     <div>
       <div className="flex gap-16">
         <div className="relative w-[384px] h-[225px] rounded-sm bg-gray-200 flex-shrink-0">
-          <Image
-            src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202311/iit-bombay-091918699-16x9.jpg?VersionId=AQZFnKvlj7kv8szgo5b4mMxyK5Y5a6UB&size=690:388"
+          <img
+            src={collegeData.collegeImageLink ? `${collegeData.collegeImageLink} ` : "https://www.onlinemanipal.com/wp-content/uploads/2024/07/institute-muj.webp"}
             alt="college"
-            className="rounded-sm"
-            layout="fill"
-            objectFit="cover"
+            className="rounded-sm object-cover w-full h-full"
+            // layout="fill"
+            // objectFit="cover"
           />
         </div>
 
         <div className="bg-slate-50 p-4 leading-7 pb-2 relative flex-grow rounded-md">
           <h1 className="text-3xl">{collegeData.collegeName}</h1>
-          <p className="font-thin mt-2">{collegeData.collegeDescription}</p>
+          <p className="font-light mt-2">{collegeData.collegeDescription}</p>
           <p className="mt-2 absolute bottom-4">
             Number of Alumni: {collegeData.numberOfAlumni}
           </p>

@@ -4,4 +4,5 @@ export interface CollegeDetails {
     // collegeId: string;
     collegeName: string;
     numberOfAlumni: number;
+    collegeImageLink?: string;
   }

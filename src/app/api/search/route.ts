@@ -22,7 +22,7 @@ export async function GET(request: Request) {
         established: true,
         id: true,
       },
-      take: 3,
+      take: 6,
     });
 
     return NextResponse.json(results);

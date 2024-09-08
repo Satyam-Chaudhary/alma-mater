@@ -13,7 +13,7 @@ model CollegeDetails {
   collegeId          String   @db.ObjectId
   collegeName        String   @unique
   numberOfAlumni     Int
-  collegeImageLink   String? 
+  collegeImageLink   String?
   //Events             Events[]
 }
 
