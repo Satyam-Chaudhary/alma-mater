@@ -34,7 +34,7 @@ const CollegesHome = () => {
       <span className="text-gradient-2 text-3xl mb-4">Government Colleges</span>
       <div className="h-[360px] overflow-y-scroll p-5">
         {error ? (
-          <div className="text-red-500">{error}</div>
+          <div className="text-red-500 flex justify-center items-center h-[300px] text-lg">{error}</div>
         ) : (
           <div className="flex flex-wrap justify-evenly gap-y-2 items-baseline">
             {loading ? (
