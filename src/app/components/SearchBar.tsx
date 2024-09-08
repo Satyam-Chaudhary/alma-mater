@@ -73,7 +73,7 @@ export const SearchBar = () => {
               </div>
             )}
             {results.length > 0 ? (
-              <div className="absolute top-full left-0 right-0 p-4 bg-white border border-gray-200 shadow-lg rounded-lg z-10 opacity-95">
+              <div className="absolute top-full left-0 right-0 p-4 bg-white border border-gray-200 shadow-lg rounded-lg z-10 opacity-95 overflow-scroll h-[220px]">
                 <SearchResults results={results} />
               </div>
             ) : hasQuery && results.length === 0 && !loading ? (
