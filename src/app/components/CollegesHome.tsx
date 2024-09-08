@@ -32,7 +32,7 @@ const CollegesHome = () => {
   return (
     <div className="m-20 space-y-5">
       <span className="text-gradient-2 text-3xl mb-4">Government Colleges</span>
-      <div className="h-[360px] overflow-scroll p-5">
+      <div className="h-[360px] overflow-y-scroll p-5">
         {error ? (
           <div className="text-red-500">{error}</div>
         ) : (
