@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import Events from './Events';
 import Footer from './Footer';
+import NetworkHubCollege from './NetworkHub';
 
 type NavItemProps = {
   label: keyof contentType;
@@ -40,9 +41,9 @@ export const NavBarCollegeDetails: React.FC<NavBarCollegeDetailsProps> = ({ coll
       </nav>
       <div className="mt-4">
         {content === 'Events' && <Events collegeName={collegeName} />}
-        {content === 'Research' && <Research />}
+        {content === 'Research' && <Research  />}
         {content === 'Startup' && <Startup />}
-        {content === 'NetworkHub' && <NetworkHub />}
+        {content === 'NetworkHub' && <NetworkHubCollege collegeName={collegeName} />}
       </div>
     </div>
   );

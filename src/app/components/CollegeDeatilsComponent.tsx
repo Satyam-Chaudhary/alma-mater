@@ -59,7 +59,7 @@ const CollegeDetailsComponent: React.FC<CollegeDetailsProps> = ({
             <p className="text-sm font-light">Student or Alumni?</p>
            <Dialog>
            <DialogTrigger asChild>
-            <Button variant="primaryBtn">Edit Profile</Button>
+            <Button variant="primaryBtn">Signup/Login For This College</Button>
             </DialogTrigger>
 
             <DialogContent className="sm:max-w-[425px]">

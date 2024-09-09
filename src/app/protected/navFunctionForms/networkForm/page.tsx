@@ -2,16 +2,26 @@
 
 import { useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
+import { useUser } from "@stackframe/stack";
 
 export default function CreateEvent() {
+  useUser({ or: 'redirect' });
+  const userDetails = useUser(); 
+  const userName  = userDetails?.id as string; 
+  
+
+
   const searchParams = useSearchParams();
   const idparam = searchParams.get("college");
   const [form, setForm] = useState({
-    nameEvent: '',
+    namePosition: '',
+    nameCompany: '',
     smallDescription: '',
     properDescription: '',
     websiteLink: '',
     collegeName: idparam || '',
+    postBy : userName
+    
   });
 
   const router = useRouter();
@@ -27,7 +37,7 @@ export default function CreateEvent() {
     e.preventDefault();
 
     try {
-      const response = await fetch('/api/events', {
+      const response = await fetch('/api/Network', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -48,22 +58,22 @@ export default function CreateEvent() {
 
   return (
     <div className="container mx-auto px-4 py-8 bg-slate-50 mt-4 rounded-lg max-w-[50%]">
-      <h1 className="text-2xl font-bold mb-6 text-center">Create Event</h1>
+      <h1 className="text-2xl font-bold mb-6 text-center">Create Job/Refferral Posting</h1>
       <form onSubmit={handleSubmit} className="space-y-6">
         <div>
-          <label htmlFor="nameEvent" className="block text-base font-medium text-gray-700">Event Name</label>
+          <label htmlFor="namePosition" className="block text-base font-medium text-gray-700">Job Post</label>
           <input
-            id="nameEvent"
+            id="namePosition"
             type="text"
-            name="nameEvent"
-            value={form.nameEvent}
+            name="namePosition"
+            value={form.namePosition}
             onChange={handleChange}
             required
             className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
         <div>
-          <label htmlFor="smallDescription" className="block text-base font-medium text-gray-700">Small Description</label>
+          <label htmlFor="smallDescription" className="block text-base font-medium text-gray-700">Job Description</label>
           <textarea
             id="smallDescription"
             name="smallDescription"
@@ -75,7 +85,7 @@ export default function CreateEvent() {
           />
         </div>
         <div>
-          <label htmlFor="properDescription" className="block text-base font-medium text-gray-700">Proper Description</label>
+          <label htmlFor="properDescription" className="block text-base font-medium text-gray-700">Qualifications Required from the Candidates</label>
           <textarea
             id="properDescription"
             name="properDescription"
@@ -108,11 +118,24 @@ export default function CreateEvent() {
             className="mt-1 block w-full p-3 border border-gray-300 rounded-md bg-gray-100 shadow-sm"
           />
         </div>
+        <div>
+          <label htmlFor="nameCompany" className="block text-base font-medium text-gray-700">Company Name</label>
+          <input
+          id="nameCompany"
+          type="text"
+          name="nameCompany"
+          value={form.nameCompany}
+          onChange={handleChange}
+          required
+          className="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+           />
+</div>
         <div className='flex items-center justify-center'>
           <button type="submit" className="px-6 py-3 bg-blue-500 text-white font-semibold rounded-md shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
-            Create Event
+            Create Job Posting for your Students (Alumni)
           </button>
         </div>
+
       </form>
     </div>
   );

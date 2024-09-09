@@ -63,6 +63,7 @@ model jobListing {
   smallDescription  String
   properDescription String
   websiteLink       String?
-  open              Boolean
+  open              Boolean?
   collegeName       String?
+  PostedBy          String?
 }
