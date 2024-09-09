@@ -24,7 +24,7 @@ export default function About() {
           <div className="flex w-full items-center justify-center mt-2">
             <Link
               className=" inline-block bg-blue-500 text-white font-semibold py-2 px-4 text-center rounded-md min-w-[100px] shadow-md hover:bg-blue-600 active:bg-blue-700 transition duration-300 ease-in-out"
-              href={"/about"}
+              href={"/aboutUs"}
             >
               Click to know more
             </Link>
