@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Events from './Events';
 import Footer from './Footer';
 import NetworkHubCollege from './NetworkHub';
+import ResearchCollege from './ResearchCollege';
 
 type NavItemProps = {
   label: keyof contentType;
@@ -41,7 +42,7 @@ export const NavBarCollegeDetails: React.FC<NavBarCollegeDetailsProps> = ({ coll
       </nav>
       <div className="mt-4">
         {content === 'Events' && <Events collegeName={collegeName} />}
-        {content === 'Research' && <Research  />}
+        {content === 'Research' && <ResearchCollege collegeName={collegeName}/>}
         {content === 'Startup' && <Startup />}
         {content === 'NetworkHub' && <NetworkHubCollege collegeName={collegeName} />}
       </div>

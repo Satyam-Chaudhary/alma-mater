@@ -41,9 +41,11 @@ model Research {
   properDescription String
   membersEmail      String
   websiteLink       String?
-  internshipVcancy  Boolean
+  internshipVacancy Boolean
+  isFunded          Boolean
   collegeName       String?
 }
+
 
 model Startup {
   id                String  @id @default(auto()) @map("_id") @db.ObjectId
